@@ -66,7 +66,7 @@ class OrganizationPlugin extends BasePlugin {
         "/organization/update",
         data: {
           "organizationId": organizationId,
-          "data": data.toJson().removeWhere((key, value) => value == null),
+          "data": data.toJson()..removeWhere((key, value) => value == null),
         },
         options: await getOptions(isTokenRequired: true),
       );
