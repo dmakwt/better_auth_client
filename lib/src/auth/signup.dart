@@ -29,7 +29,13 @@ class Signup<T extends User> {
     try {
       final response = await _dio.post(
         "/sign-up/email",
-        data: {"email": email, "password": password, "name": name, "image": image, "username": username},
+        data: {
+          "email": email,
+          "password": password,
+          "name": name,
+          if (image != null) "image": image,
+          if (username != null) "username": username,
+        },
       );
       final body = response.data;
       _setToken(body["token"]);
