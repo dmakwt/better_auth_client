@@ -7,7 +7,7 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  dio: ^5.8.0+1
+  dio: ^5.10.0
   json_annotation: ^4.9.0
 
 dev_dependencies:
